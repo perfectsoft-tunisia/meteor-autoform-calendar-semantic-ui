@@ -44,5 +44,5 @@ Template.afCalendar.helpers({
 
 Template.afCalendar.onDestroyed(function () {
     let $input = this.$('.ui.calendar');
-    $input.calendar('remove');
+    $input.off();
 });
