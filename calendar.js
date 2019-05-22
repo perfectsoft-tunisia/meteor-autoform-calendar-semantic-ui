@@ -1,5 +1,3 @@
-
-
 import {Template} from 'meteor/templating';
 
 let AutoForm;
@@ -17,7 +15,6 @@ Template.afCalendar.onRendered(function () {
     let data = this.data;
 
     // instanciate calendar
-
     $input.calendar(data.atts.datePickerOptions);
 
     this.autorun(() => {
@@ -44,5 +41,5 @@ Template.afCalendar.helpers({
 
 Template.afCalendar.onDestroyed(function () {
     let $input = this.$('.ui.calendar');
-    $input.off();
+    $input.calendar('destroy');
 });
